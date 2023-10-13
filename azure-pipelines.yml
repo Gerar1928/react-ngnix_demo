@@ -4,14 +4,14 @@ trigger:
 pool: default
 
 stages:
-- stage: CI
+- stage: Create txt Files
   jobs:
-  - job: CIWork
+  - job: CreateFiles
     steps:
-    - script: ls -l
+    - script: bash create_files.sh
 
-- stage: Test
+- stage: Print Hello World
   jobs:
-  - job: TestWork
+  - job: PrintHelloWorld
     steps:
-    - script: echo "Do test work"
+    - script: bash hello_world.sh

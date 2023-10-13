@@ -4,13 +4,13 @@ trigger:
 pool: default
 
 stages:
-- stage: Create txt Files
+- stage: Create_txt_Files
   jobs:
   - job: CreateFiles
     steps:
     - script: bash create_files.sh
 
-- stage: Print Hello World
+- stage: Print_Hello_World
   jobs:
   - job: PrintHelloWorld
     steps:

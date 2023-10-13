@@ -8,7 +8,7 @@ stages:
   jobs:
   - job: CIWork
     steps:
-    - script: echo "Do CI work"
+    - script: ls -l
 
 - stage: Test
   jobs:

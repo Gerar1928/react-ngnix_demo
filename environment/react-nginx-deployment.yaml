@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-nginx
+  labels:
+    app: react-nginx
+    group: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-nginx
+  template:
+    metadata:
+      labels:
+        app: react-nginx
+        group: frontend
+    spec:
+      containers:
+        - name: react-nginx
+          image: gerar1928/frontend
+          ports:
+            - containerPort: 80

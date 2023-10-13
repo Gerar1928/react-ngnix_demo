@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool: default
+
+stages:
+- stage: CI
+  jobs:
+  - job: CIWork
+    steps:
+    - script: echo "Do CI work"
+
+- stage: Test
+  jobs:
+  - job: TestWork
+    steps:
+    - script: echo "Do test work"
